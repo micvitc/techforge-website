@@ -1,8 +1,9 @@
 import React from "react";
 import { Code2, Rocket, Users } from "lucide-react";
 import AuroraText from "./magicui/aurora-text";
-import Image from "next/image";
 import MarqueeText from "@/components/MarqueeText";
+import Link from "next/link";
+import Robot from "./Robot";
 
 function App() {
     return (
@@ -34,7 +35,7 @@ function App() {
                                     </AuroraText>
                                     {/* <AuroraText>beautiful</AuroraText> */}
                                 </h1>
-                                <p className="text-zinc-400 text-lg md:text-xl max-w-lg">
+                                <p className="text-zinc-400 font-medium text-lg md:text-xl max-w-lg">
                                     Join TechForge 2025 - 48 hours of coding,
                                     collaboration, and groundbreaking
                                     innovations. Be part of the next generation
@@ -46,9 +47,12 @@ function App() {
                                 <button className="px-8 py-4 bg-white text-black rounded-lg font-semibold text-lg transition-all hover:bg-zinc-200 hover:scale-105 focus:ring-4 focus:ring-white/30 animate-fade-in-up">
                                     Register Now
                                 </button>
-                                <button className="px-8 py-4 bg-zinc-900 text-white border border-zinc-800 rounded-lg font-semibold text-lg transition-all hover:bg-zinc-800 focus:ring-4 focus:ring-white/30 backdrop-blur-sm animate-fade-in-up delay-100">
+                                <Link
+                                    href={"#contact"}
+                                    className="px-8 py-4 bg-zinc-900 text-center text-white border border-zinc-800 rounded-lg font-semibold text-lg transition-all hover:bg-zinc-800 focus:ring-4 focus:ring-white/30 backdrop-blur-sm animate-fade-in-up delay-100"
+                                >
                                     Contact Us
-                                </button>
+                                </Link>
                             </div>
 
                             <div className="flex gap-8 text-zinc-400">
@@ -67,17 +71,8 @@ function App() {
                             </div>
                         </div>
 
-                        <div className="hidden lg:block">
-                            <div className="relative">
-                                <div className="absolute inset-0 bg-gradient-to-tr from-black/80 to-transparent rounded-3xl backdrop-blur-sm"></div>
-                                <Image
-                                    src={"/hack.png"}
-                                    alt="Hackathon Collaboration"
-                                    className="rounded-xl shadow-2xl animate-float grayscale contrast-125 brightness-75"
-                                    width={450}
-                                    height={450}
-                                />
-                            </div>
+                        <div className="hidden lg:block h-[80vh] mt-scroll-20">
+                            <Robot />
                         </div>
                     </div>
                 </div>

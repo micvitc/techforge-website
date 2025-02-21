@@ -13,7 +13,7 @@ const Sponsors = () => {
             id="sponsors"
             className="m-10 scroll-mt-20 flex flex-col gap-10 items-center justify-center"
         >
-            <p className="text-white font-thin text-3xl">Sponsors</p>
+            <p className="text-white font-normal text-3xl">Sponsors</p>
             <div className="flex flex-col items-center justify-center w-full py-4">
                 <div className="grid grid-cols-1  md:grid-cols-3 max-w-5xl mx-auto gap-10">
                     {sponsors.map((sponsor, index) => {

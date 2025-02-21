@@ -1,10 +1,11 @@
 import React from "react";
+import Link from "next/link";
+import { ArrowUp } from "lucide-react";
 import Hero from "@/components/Hero";
 import GridCards from "@/components/GridCards";
-import { ArrowUp } from "lucide-react";
-import Link from "next/link";
 import Speakers from "@/components/Speakers";
 import Sponsors from "@/components/Sponsors";
+import Kawai from "@/components/Kawai";
 
 const Home = () => {
     return (
@@ -13,6 +14,7 @@ const Home = () => {
             <GridCards />
             <Speakers />
             <Sponsors />
+            <Kawai />
 
             {/* Floating Button */}
             <Link

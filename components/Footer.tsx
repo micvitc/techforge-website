@@ -5,7 +5,7 @@ import Link from "next/link";
 const Footer = () => {
     return (
         <footer className="bg-black border-t border-zinc-800/50 py-12">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
+            <div id="contact" className="max-w-7xl scroll-mt-20 mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
                 <div className="flex items-center gap-3 mb-4">
                     <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
                         <Code2 className="w-5 h-5 text-black" />
@@ -14,7 +14,7 @@ const Footer = () => {
                         TechForge
                     </span>
                 </div>
-                <p className="text-zinc-400 text-sm max-w-md">
+                <p className="text-zinc-400 text-sm font-normal max-w-md">
                     Join the next generation of innovators at TechForge 2025. 48
                     hours of coding, collaboration, and breakthrough
                     innovations.
@@ -47,7 +47,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="mt-12 pt-8 border-t border-zinc-800/50 text-center">
-                <p className="text-zinc-400 text-sm">
+                <p className="text-zinc-400 font-medium text-sm">
                     © 2025 TechForge. All rights reserved.
                 </p>
             </div>

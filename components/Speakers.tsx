@@ -7,7 +7,7 @@ const Speakers = () => {
             id="jury"
             className="m-10 scroll-mt-20 flex flex-col gap-10 items-center justify-center"
         >
-            <p className="text-white font-thin text-3xl">Speakers & Jury</p>
+            <p className="text-white font-normal text-3xl">Speakers & Jury</p>
             <FocusCardsComp />
         </div>
     );

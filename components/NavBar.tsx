@@ -2,15 +2,39 @@
 import React, { useState } from "react";
 import { Menu, X, Code2 } from "lucide-react";
 import Link from "next/link";
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+
+const clubs = [
+    {
+        name: "Microsoft Innovations Club",
+        logo: "",
+        site: "",
+    },
+    {
+        name: "Business Innovations Club",
+        logo: "",
+        site: "",
+    },
+    {
+        name: "Event Management Club",
+        logo: "",
+        site: "",
+    },
+];
 
 const Navbar = ({}) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const Links = [
-        { label: "Event", href: "#event"},
+        { label: "Event", href: "#event" },
         { label: "Speakers & Jury", href: "#jury" },
         { label: "Sponsors", href: "#sponsors" },
-        { label: "Organizing Clubs", href: "/" },
+        { label: "Organizing Clubs", href: "" },
     ];
 
     return (
@@ -34,13 +58,32 @@ const Navbar = ({}) => {
                         {/* Navigation Links */}
                         <div className="flex space-x-6">
                             {Links.map((link, index) => (
-                                <Link
-                                    key={index}
-                                    href={link.href}
-                                    className="text-zinc-400 hover:text-white transition-colors duration-200 text-sm font-medium"
-                                >
-                                    {link.label}
-                                </Link>
+                                <React.Fragment key={index}>
+                                    {link.label === "Organizing Clubs" ? (
+                                        <DropdownMenu>
+                                            <DropdownMenuTrigger className="text-zinc-400 hover:text-white transition-colors duration-200 text-sm font-medium focus:outline-none">
+                                                {link.label}
+                                            </DropdownMenuTrigger>
+                                            <DropdownMenuContent className="bg-zinc-900 border-zinc-800 text-zinc-400">
+                                                {clubs.map((club, idx) => (
+                                                    <DropdownMenuItem
+                                                        key={idx}
+                                                        className="hover:bg-zinc-800 cursor-pointer"
+                                                    >
+                                                        {club.name}
+                                                    </DropdownMenuItem>
+                                                ))}
+                                            </DropdownMenuContent>
+                                        </DropdownMenu>
+                                    ) : (
+                                        <Link
+                                            href={link.href}
+                                            className="text-zinc-400 hover:text-white transition-colors duration-200 text-sm font-medium"
+                                        >
+                                            {link.label}
+                                        </Link>
+                                    )}
+                                </React.Fragment>
                             ))}
                         </div>
 
