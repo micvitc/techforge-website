@@ -3,14 +3,14 @@ import React, { useState } from "react";
 import { Menu, X, Code2 } from "lucide-react";
 import Link from "next/link";
 
-const Navbar = () => {
+const Navbar = ({}) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const Links = [
-        { label: "Home", href: "/" },
-        { label: "Speakers & Jury", href: "/" },
+        { label: "Event", href: "#event"},
+        { label: "Speakers & Jury", href: "#jury" },
         { label: "Organizing Clubs", href: "/" },
-        { label: "Prizes", href: "/" },
+        // { label: "Prizes", href: "/" },
     ];
 
     return (
@@ -78,6 +78,7 @@ const Navbar = () => {
                             <Link
                                 key={index}
                                 href={link.href}
+                                onClick={() => setIsMenuOpen(false)}
                                 className="text-zinc-400 hover:text-white transition-colors duration-200 text-sm font-medium"
                             >
                                 {link.label}

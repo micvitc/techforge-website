@@ -5,7 +5,10 @@ import Image from "next/image";
 function App() {
     return (
         <>
-            <div className="min-h-screen bg-black flex items-center justify-center relative overflow-hidden">
+            <div
+                id="hero"
+                className="min-h-screen scroll-mt-20 bg-black flex items-center justify-center relative overflow-hidden"
+            >
                 {/* Subtle gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-zinc-900 to-black"></div>
 
@@ -62,14 +65,13 @@ function App() {
                             </div>
                         </div>
 
-
                         <div className="hidden lg:block">
                             <div className="relative">
                                 <div className="absolute inset-0 bg-gradient-to-tr from-black/80 to-transparent rounded-3xl backdrop-blur-sm"></div>
                                 <Image
                                     src={"/hack.png"}
                                     alt="Hackathon Collaboration"
-                                    className="rounded-3xl shadow-2xl animate-float grayscale contrast-125 brightness-75"
+                                    className="rounded-xl shadow-2xl animate-float grayscale contrast-125 brightness-75"
                                     width={450}
                                     height={450}
                                 />
