@@ -2,12 +2,14 @@ import React from "react";
 import { Code2, Rocket, Users } from "lucide-react";
 import AuroraText from "./magicui/aurora-text";
 import Image from "next/image";
+import MarqueeText from "@/components/MarqueeText";
+
 function App() {
     return (
-        <>
+        <div className="flex flex-col h-screen">
             <div
                 id="hero"
-                className="min-h-screen scroll-mt-20 bg-black flex items-center justify-center relative overflow-hidden"
+                className="flex-1 scroll-mt-20 bg-black flex items-center justify-center relative overflow-hidden"
             >
                 {/* Subtle gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-zinc-900 to-black"></div>
@@ -45,7 +47,7 @@ function App() {
                                     Register Now
                                 </button>
                                 <button className="px-8 py-4 bg-zinc-900 text-white border border-zinc-800 rounded-lg font-semibold text-lg transition-all hover:bg-zinc-800 focus:ring-4 focus:ring-white/30 backdrop-blur-sm animate-fade-in-up delay-100">
-                                    Learn More
+                                    Contact Us
                                 </button>
                             </div>
 
@@ -60,7 +62,7 @@ function App() {
                                 </div>
                                 <div className="flex flex-col md:flex-row items-start gap-2">
                                     <Rocket className="w-6 h-6" />
-                                    <span>$50K Prizes</span>
+                                    <span>₹10K Prizes</span>
                                 </div>
                             </div>
                         </div>
@@ -83,7 +85,8 @@ function App() {
                 {/* Minimal grid pattern */}
                 <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,black_70%,transparent_100%)]"></div>
             </div>
-        </>
+            <MarqueeText />
+        </div>
     );
 }
 
