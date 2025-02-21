@@ -11,7 +11,7 @@ const Home = () => {
             <GridCards />
             <Link
                 href={"#hero"}
-                className="fixed bottom-6 right-6 p-3 bg-gradient-to-r from-blue-500 to-blue-600 hover:opacity-[85%] text-white rounded-full shadow-lg hover:bg-blue-600 transition-all"
+                className="fixed bottom-6 right-6 p-3 bg-zinc-600/50 border border-zinc-600/60  hover:opacity-[85%] text-white rounded-full shadow-lg transition-all"
             >
                 <ArrowUp size={24} />
             </Link>
