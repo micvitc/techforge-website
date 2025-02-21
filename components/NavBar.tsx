@@ -9,8 +9,8 @@ const Navbar = ({}) => {
     const Links = [
         { label: "Event", href: "#event"},
         { label: "Speakers & Jury", href: "#jury" },
+        { label: "Sponsors", href: "#sponsors" },
         { label: "Organizing Clubs", href: "/" },
-        // { label: "Prizes", href: "/" },
     ];
 
     return (
