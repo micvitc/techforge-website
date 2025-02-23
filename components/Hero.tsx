@@ -22,7 +22,7 @@ function App() {
                     <div className="absolute -bottom-1/2 -right-1/2 w-full h-full bg-zinc-800/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
                 </div>
 
-                <div className="container mx-auto px-6 py-16 relative z-10">
+                <div className="container mt-20 md:mt-0 mx-auto px-6 py-16 relative z-10">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div className="space-y-8">
                             <div className="space-y-4">
