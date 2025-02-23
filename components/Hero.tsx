@@ -4,6 +4,7 @@ import AuroraText from "./magicui/aurora-text";
 import MarqueeText from "@/components/MarqueeText";
 import Link from "next/link";
 import Robot from "./Robot";
+import Counter from "./Counter";
 
 function App() {
     return (
@@ -68,6 +69,9 @@ function App() {
                                     <Rocket className="w-6 h-6" />
                                     <span>₹10K Prizes</span>
                                 </div>
+                            </div>
+                            <div className="flex items-center justify-center sm:justify-start md:justify-start">
+                                <Counter year={2025} month={4} day={3} />
                             </div>
                         </div>
 
